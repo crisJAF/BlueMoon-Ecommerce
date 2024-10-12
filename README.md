@@ -1,8 +1,3 @@
-# EcommerceAutoShop
-
-This project was generated with [App Builder Code Gen](https://www.infragistics.com/products/appbuilder).
-
-
 ## Run in Visual Studio 2022
 
 - open the project in **Visual Studio 2022**
