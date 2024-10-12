@@ -2,16 +2,21 @@
     display: flex;
     flex-direction: column;
 }
+
 .master-view-container {
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
     overflow: auto;
-    height: 100%;
+    min-height: 100vh; /* Asegura que el contenedor tenga al menos el tamaño de la ventana */
+    display: flex;
+    flex-direction: column;
 }
+
 .row-layout {
     display: flex;
 }
+
 .group {
     border-color: hsla(var(--ig-gray-200));
     border-width: 0px 0px 1px;
@@ -26,6 +31,7 @@
     max-height: 71px;
     flex-shrink: 0;
 }
+
 .group_1 {
     justify-content: center;
     align-items: center;
@@ -33,6 +39,7 @@
     overflow: hidden;
     position: relative;
 }
+
 .group_2 {
     justify-content: flex-end;
     align-items: center;
@@ -41,6 +48,7 @@
     margin: 0 0 0 8px;
     min-height: 50px;
 }
+
 .image {
     object-fit: none;
     width: 180px;
@@ -51,25 +59,38 @@
     max-height: 70px;
     flex-shrink: 0;
 }
+
 .icon {
     color: hsla(var(--ig-secondary-400));
 }
+
 .button {
     --ig-size: var(--ig-size-medium);
     height: max-content;
     flex-shrink: 0;
 }
-.button::part(base) {
-    color: hsla(var(--ig-gray-700));
-}
+
+    .button::part(base) {
+        color: hsla(var(--ig-gray-700));
+    }
+
 .icon-button {
     --ig-size: var(--ig-size-small);
 }
-.icon-button::part(base) {
-    color: hsla(var(--ig-secondary-400));
-}
+
+    .icon-button::part(base) {
+        color: hsla(var(--ig-secondary-400));
+    }
+
 .view-container {
     overflow: auto;
     position: relative;
-    flex-grow: 1;
+    flex-grow: 1; /* Esto permite que el contenido ocupe el espacio restante */
+}
+
+footer {
+    margin-top: auto; /* Esto asegura que el footer se mantenga al fondo */
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
 }

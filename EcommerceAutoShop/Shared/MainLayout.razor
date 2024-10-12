@@ -35,13 +35,17 @@
             </IgbIconButton>
         </div>
     </div>
+
     <div class="view-container">
         @Body
     </div>
+
+    <footer>
+        <Footer />
+    </footer>
 </div>
 
 @code {
-
     public void Navigate(string path)
     {
         NavigationManager.NavigateTo(path);

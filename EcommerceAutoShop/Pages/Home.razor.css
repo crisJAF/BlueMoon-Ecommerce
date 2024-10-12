@@ -288,8 +288,6 @@
     background-color: transparent;
 }
 
-
-
 .search-box {
     width: 100%; /* Ajusta al ancho disponible en el contenedor */
     max-width: 400px; /* Ajusta el ancho máximo si es necesario */
@@ -300,6 +298,6 @@
     background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco con un 80% de opacidad */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una ligera sombra */
     margin-top: 15px; /* Espacio superior */
-    color: #000; /* Color del texto */
+    color: #fff; /* Color del texto */
 }
 
