@@ -1,0 +1,311 @@
+@page "/"
+@page "/home"
+@inject NavigationManager NavigationManager
+
+<div class="column-layout home-container">
+    <div class="column-layout page-content">
+        <div class="row-layout main-page-header">
+            <div class="row-layout group">
+                <div class="column-layout group_1">
+                    <input type="text" class="search-box" placeholder="Busca tu producto..." />
+                </div>
+            </div>
+        </div>
+        <div class="column-layout content">
+            <div class="column-layout popular-categories">
+                <h5 class="h5">
+                    Marcas Populares
+                </h5>
+                <div class="row-layout group_4">
+                    <IgbCard @onclick="@(e => Navigate("/all_products"))" class="card" home-scope>
+                        <IgbCardMedia class="media-content" home-scope>
+                            <img src="assets/ainash_logo.jpg" class="image" />
+                        </IgbCardMedia>
+                        <IgbCardHeader>
+                            <h3 slot="title">
+                                AINASH PARFUMS
+                            </h3>
+                        </IgbCardHeader>
+                    </IgbCard>
+                    <IgbCard class="card" home-scope>
+                        <IgbCardMedia class="media-content" home-scope>
+                            <img src="assets/armaf_logo.jpg" class="image" />
+                        </IgbCardMedia>
+                        <IgbCardHeader>
+                            <h3 slot="title">
+                                ARMAF PERFUMES
+                            </h3>
+                        </IgbCardHeader>
+                    </IgbCard>
+                    <IgbCard class="card" home-scope>
+                        <IgbCardMedia class="media-content" home-scope>
+                            <img src="assets/afnan.png" class="image" />
+                        </IgbCardMedia>
+                        <IgbCardHeader>
+                            <h3 slot="title">
+                                AFNAN PERFUMES
+                            </h3>
+                        </IgbCardHeader>
+                    </IgbCard>
+                    <IgbCard class="card" home-scope>
+                        <IgbCardMedia class="media-content" home-scope>
+                            <img src="assets/Maison_Alhambra.webp" class="image" />
+                        </IgbCardMedia>
+                        <IgbCardHeader>
+                            <h3 slot="title">
+                                MAISON ALHAMBRA
+                            </h3>
+                        </IgbCardHeader>
+                    </IgbCard>
+                </div>
+            </div>
+            <div class="column-layout popular-categories">
+                <h5 class="h5">
+                    Productos Mas Vendidos
+                </h5>
+                <div class="row-layout group_5">
+                    <IgbCard @onclick="@(e => Navigate("/product_details"))" class="card" home-scope>
+                        <IgbCardMedia class="media-content_1" home-scope>
+                            <img src="assets/F1.webp" class="image" />
+                        </IgbCardMedia>
+                        <IgbCardHeader>
+                            <h3 slot="title">
+                                Ainash Believe in Yourself
+                            </h3>
+                            <h5 slot="subtitle">
+                                Inspirado en Bond N°9
+                                De Bond N°9
+                            </h5>
+                        </IgbCardHeader>
+                        <IgbCardContent class="body-content" home-scope>
+                            <h6 class="h6">
+                                $59.90
+                            </h6>
+                        </IgbCardContent>
+                        <IgbCardActions class="actions-content" home-scope>
+                            <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_1" home-scope>
+                                <span class="material-icons icon">
+                                    add_shopping_cart
+                                </span>
+                                <span>ADD TO CART</span>
+                                <IgbRipple></IgbRipple>
+                            </IgbButton>
+                        </IgbCardActions>
+                    </IgbCard>
+                    <IgbCard class="card" home-scope>
+                        <IgbCardMedia class="media-content_1" home-scope>
+                            <img src="assets/F2.webp" class="image" />
+                        </IgbCardMedia>
+                        <IgbCardHeader>
+                            <h3 slot="title">
+                                Ainash She is Love
+                            </h3>
+                            <h5 slot="subtitle">
+                                Inspirado en Accento overdose
+                                De Xerjoff
+                            </h5>
+                        </IgbCardHeader>
+                        <IgbCardContent class="body-content" home-scope>
+                            <h6 class="h6">
+                                $44.50
+                            </h6>
+                        </IgbCardContent>
+                        <IgbCardActions class="actions-content" home-scope>
+                            <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_2" home-scope>
+                                <span class="material-icons icon">
+                                    add_shopping_cart
+                                </span>
+                                <span>ADD TO CART</span>
+                                <IgbRipple></IgbRipple>
+                            </IgbButton>
+                        </IgbCardActions>
+                    </IgbCard>
+                    <IgbCard class="card" home-scope>
+                        <IgbCardMedia class="media-content_1" home-scope>
+                            <img src="assets/F3.webp" class="image" />
+                        </IgbCardMedia>
+                        <IgbCardHeader>
+                            <h3 slot="title">
+                                Ainash Perfect Women
+                            </h3>
+                            <h5 slot="subtitle">
+                                Inspirado en Flamenco
+                                De Ramon Monegal
+                            </h5>
+                        </IgbCardHeader>
+                        <IgbCardContent class="body-content" home-scope>
+                            <h6 class="h6">
+                                $49.50
+                            </h6>
+                        </IgbCardContent>
+                        <IgbCardActions class="actions-content" home-scope>
+                            <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_3" home-scope>
+                                <span class="material-icons icon">
+                                    add_shopping_cart
+                                </span>
+                                <span>ADD TO CART</span>
+                                <IgbRipple></IgbRipple>
+                            </IgbButton>
+                        </IgbCardActions>
+                    </IgbCard>
+                    <IgbCard class="card" home-scope>
+                        <IgbCardMedia class="media-content_1" home-scope>
+                            <img src="assets/F4.webp" class="image" />
+                        </IgbCardMedia>
+                        <IgbCardHeader>
+                            <h3 slot="title">
+                                Caramel Sugar Elixir
+                            </h3>
+                            <h5 slot="subtitle">
+                                Mezcla original de fragancias
+                                De DUA BRAND
+                            </h5>
+                        </IgbCardHeader>
+                        <IgbCardContent class="body-content" home-scope>
+                            <h6 class="h6">
+                                $11.00
+                            </h6>
+                        </IgbCardContent>
+                        <IgbCardActions class="actions-content" home-scope>
+                            <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_4" home-scope>
+                                <span class="material-icons icon">
+                                    add_shopping_cart
+                                </span>
+                                <span>ADD TO CART</span>
+                                <IgbRipple></IgbRipple>
+                            </IgbButton>
+                        </IgbCardActions>
+                    </IgbCard>
+                    <IgbCard class="card" home-scope>
+                        <IgbCardMedia class="media-content_1" home-scope>
+                            <img src="assets/F5.webp" class="image" />
+                        </IgbCardMedia>
+                        <IgbCardHeader>
+                            <h3 slot="title">
+                                TCasino Royale’s Chariot
+                            </h3>
+                            <h5 slot="subtitle">
+                                Inspirado en Layton /Baccarat
+                                Rouge 540 Extrait
+                                De Parfum de Marly /MFK
+                            </h5>
+                        </IgbCardHeader>
+                        <IgbCardContent class="body-content" home-scope>
+                            <h6 class="h6">
+                                $19.90
+                            </h6>
+                        </IgbCardContent>
+                        <IgbCardActions class="actions-content" home-scope>
+                            <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_5" home-scope>
+                                <span class="material-icons icon">
+                                    add_shopping_cart
+                                </span>
+                                <span>ADD TO CART</span>
+                                <IgbRipple></IgbRipple>
+                            </IgbButton>
+                        </IgbCardActions>
+                    </IgbCard>
+                    <IgbCard class="card" home-scope>
+                        <IgbCardMedia class="media-content_1" home-scope>
+                            <img src="assets/F6.webp" class="image" />
+                        </IgbCardMedia>
+                        <IgbCardHeader>
+                            <h3 slot="title">
+                                Nur Jahan’s Elixir
+                            </h3>
+                            <h5 slot="subtitle">
+                                Inspirado en Shalimar
+                                (Vintage 1970’s Formulation)
+                                Guerlain
+                            </h5>
+                        </IgbCardHeader>
+                        <IgbCardContent class="body-content" home-scope>
+                            <h6 class="h6">
+                                $24.50
+                            </h6>
+                        </IgbCardContent>
+                        <IgbCardActions class="actions-content" home-scope>
+                            <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_6" home-scope>
+                                <span class="material-icons icon">
+                                    add_shopping_cart
+                                </span>
+                                <span>ADD TO CART</span>
+                                <IgbRipple></IgbRipple>
+                            </IgbButton>
+                        </IgbCardActions>
+                    </IgbCard>
+                </div>
+            </div>
+        </div>
+        <div class="row-layout sitemap">
+            <div class="column-layout group_6">
+                <p class="typography__subtitle-2 text_1">
+                    Dirección
+                </p>
+                <p class="typography__body-2 text_1">
+                    De los semaforos de la Vicky 1 cuadra al Sur,
+                </p>
+                <p class="typography__body-2 text_1">
+                    Dahani Colectivo. Managua, Nicaragua.
+                </p>
+                <p class="typography__subtitle-2 text_2">
+                    Numerico Telefonico
+                </p>
+                <p class="typography__body-2 text_1">
+                    +505 8360 5530
+                </p>
+            </div>
+            <div class="column-layout group_7">
+                <p class="typography__subtitle-2 text_1">
+                    Ayuda
+                </p>
+                <p class="typography__body-2 text_1">
+                    Preguntas y Respuestas
+                </p>
+                <p class="typography__body-2 text_1">
+                    Delivery
+                </p>
+            </div>
+            <div class="column-layout group_7">
+                <p class="typography__subtitle-2 text_1">
+                    Acerca
+                </p>
+                <p class="typography__body-2 text_1">
+                    Nosotros
+                </p>
+                <p class="typography__body-2 text_1">
+                    Reseñas
+                </p>
+            </div>
+            <div class="column-layout group_7">
+                <p class="typography__subtitle-2 text_1">
+                    Siguenos
+                </p>
+                <p class="typography__body-2 text_1">
+                    Facebook
+                </p>
+                <p class="typography__body-2 text_1">
+                    Instagram
+                </p>
+            </div>
+        </div>
+        <div class="row-layout footer">
+            <p class="typography__body-2 text_3">
+                Copyright ©2024 BlueMoon.com, Todos los derechos reservados.
+            </p>
+            <div class="row-layout group_8">
+                <p class="typography__body-2 text_4">
+                    Terminos y Condiciones
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    public void Navigate(string path)
+    {
+        NavigationManager.NavigateTo(path);
+    }
+}

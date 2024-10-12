@@ -1,0 +1,536 @@
+@page "/product_details"
+
+<div style="text-align: center; margin: 3rem;">
+    <img src="assets/NOTFOUND.png" alt="Imagen no encontrada" />
+</div>
+
+@* <div class="column-layout product-details-container">
+    <div class="column-layout page-content">
+        <div class="column-layout inner-pages-header">
+            <img src="assets/AutoDeals_Logo.svg" class="image" />
+            <p class="typography__body-1 text">
+                Enjoy 20% off on all your weekend purchases
+            </p>
+        </div>
+        <div class="column-layout content">
+            <div class="column-layout group">
+                <div class="row-layout breadcrumbs">
+                    <a class="typography__body-2 hyperlink">
+                        Home
+                    </a>
+                    <p class="typography__body-2 text_1">
+                        /
+                    </p>
+                    <a class="typography__body-2 hyperlink">
+                        Auto Body Parts
+                    </a>
+                    <p class="typography__body-2 text_1">
+                        /
+                    </p>
+                    <a class="typography__body-2 hyperlink">
+                        Engine &amp; Drivetrain
+                    </a>
+                    <p class="typography__body-2 text_1">
+                        /
+                    </p>
+                    <a class="typography__body-2 hyperlink">
+                        Starters, Alternators, Batteries &amp; Components
+                    </a>
+                    <p class="typography__body-2 text_1">
+                        /
+                    </p>
+                    <p class="typography__body-2 text_2">
+                        Alternator
+                    </p>
+                </div>
+                <div class="row-layout product-details">
+                    <div class="column-layout group_1">
+                        <div class="group_2"></div>
+                        <div class="group_3"></div>
+                        <div class="group_4"></div>
+                    </div>
+                    <div class="row-layout group_5">
+                        <img src="assets/Alternator1.jpg" class="image_1" />
+                    </div>
+                    <div class="column-layout group_6">
+                        <h5 class="content_1">
+                            Gold Alternator
+                        </h5>
+                        <div class="row-layout group_7">
+                            <IgbRating Value="@_value" Change="@(e => _value = e.Detail)" class="rating" product_details-scope></IgbRating>
+                            <a class="typography__body-2 hyperlink_1">
+                                (2 customer reviews)
+                            </a>
+                        </div>
+                        <h4 class="content_4">
+                            $59.90
+                        </h4>
+                        <p class="typography__subtitle-1 text_3">
+                            Part #ABC123-456789 | SKU: A1234-01
+                        </p>
+                        <a class="typography__body-2 hyperlink_2">
+                            Limited Lifetime Warranty
+                        </a>
+                        <p class="typography__body-2 text_4">
+                            Generic Brand alternators are engineered to provide the amp output necessary to power today’s vehicles. Every unit is 100% NEW (not remanufactured) and made with proprietary components and processes to ensure maximum life and performance.
+                        </p>
+                        <IgbBadge Variant="BadgeVariant.Success" class="badge" product_details-scope>
+                            IN STOCK
+                        </IgbBadge>
+                        <div class="row-layout group_8">
+                            <IgbSelect Outlined="false" Label="Quantitiy" Value="@_value1" Change="@(e => _value1 = e.Detail.Value)" class="select" product_details-scope>
+                                <IgbSelectItem Value="1">
+                                    1
+                                </IgbSelectItem>
+                                <IgbSelectItem Value="1">
+                                    2
+                                </IgbSelectItem>
+                                <IgbSelectItem Value="1">
+                                    3
+                                </IgbSelectItem>
+                                <IgbSelectItem Value="1">
+                                    4
+                                </IgbSelectItem>
+                            </IgbSelect>
+                        </div>
+                        <p class="typography__body-2 content_1">
+                            Select delivery option:
+                        </p>
+                        <IgbButtonGroup class="button-group" product_details-scope>
+                            <IgbToggleButton>
+                                <span class="material-icons">
+                                    store_mall_directory
+                                </span>
+                                <span>Free In-Store Pickup</span>
+                                <IgbRipple></IgbRipple>
+                            </IgbToggleButton>
+                            <IgbToggleButton>
+                                <span class="material-icons">
+                                    home
+                                </span>
+                                <span>Home Delivery</span>
+                                <IgbRipple></IgbRipple>
+                            </IgbToggleButton>
+                        </IgbButtonGroup>
+                        <IgbButton class="button button_2" product_details-scope>
+                            <span class="material-icons icon">
+                                shopping_cart
+                            </span>
+                            <span>ADD TO CART</span>
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
+                    </div>
+                </div>
+                <div class="row-layout product-info">
+                    <div class="column-layout specs">
+                        <h5 class="content_2">
+                            Product Specifications
+                        </h5>
+                        <div class="column-layout table">
+                            <div class="row-layout group_9">
+                                <p class="typography__body-1 text_5">
+                                    Part #
+                                </p>
+                                <p class="typography__body-1 text_2">
+                                    ABC123-456789
+                                </p>
+                            </div>
+                            <div class="row-layout group_10">
+                                <p class="typography__body-1 text_5">
+                                    SKU #
+                                </p>
+                                <p class="typography__body-1 text_2">
+                                    740988
+                                </p>
+                            </div>
+                            <div class="row-layout group_9">
+                                <p class="typography__body-1 text_5">
+                                    Weight
+                                </p>
+                                <p class="typography__body-1 text_2">
+                                    10 lbs
+                                </p>
+                            </div>
+                            <div class="row-layout group_10">
+                                <p class="typography__body-1 text_5">
+                                    Type
+                                </p>
+                                <p class="typography__body-1 text_2">
+                                    Alternator
+                                </p>
+                            </div>
+                            <div class="row-layout group_9">
+                                <p class="typography__body-1 text_5">
+                                    System Voltage
+                                </p>
+                                <p class="typography__body-1 text_2">
+                                    12 V
+                                </p>
+                            </div>
+                            <div class="row-layout group_10">
+                                <p class="typography__body-1 text_6">
+                                    Pulleys Included
+                                </p>
+                                <p class="typography__body-1 text_2">
+                                    2
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-layout description">
+                        <h5 class="content_1">
+                            Product Description
+                        </h5>
+                        <div class="column-layout table">
+                            <div class="row-layout group_11">
+                                <span class="material-icons icon_1">
+                                    check_circle
+                                </span>
+                                <p class="typography__body-1 text_7">
+                                    Key components are greased to help with long term reliability in harsh conditions
+                                </p>
+                            </div>
+                            <div class="row-layout group_11">
+                                <span class="material-icons icon_1">
+                                    check_circle
+                                </span>
+                                <p class="typography__body-1 text_7">
+                                    Every unit is built with 100% NEW components that are designed to meet the highest quality standards
+                                </p>
+                            </div>
+                            <div class="row-layout group_11">
+                                <span class="material-icons icon_1">
+                                    check_circle
+                                </span>
+                                <p class="typography__body-1 text_7">
+                                    Every unit is triple tested (component, subassembly and end of line) to ensure quality and performance
+                                </p>
+                            </div>
+                        </div>
+                        <p class="typography__body-2 content_2">
+                            New Alternators are manufactured with all new components and are the ideal high quality replacement for many vehicles on the road today. Key components are lubricated to help with performance and long life reliability. Alternators have regulators that are computer tested for voltage stability, terminal function, and electronic circuit board integrity. These premium aftermarket replacement components are manufactured to meet your expectations for fit, form, and function. Some ACDelco Gold parts may have formerly appeared as ACDelco Professional.
+                        </p>
+                    </div>
+                </div>
+                <div class="column-layout also-purchased">
+                    <h5 class="content_1">
+                        Customers Also Purchased
+                    </h5>
+                    <div class="row-layout group_12">
+                        <IgbCard Outlined="false" class="card" product_details-scope>
+                            <IgbCardMedia class="media-content" product_details-scope>
+                                <img src="assets/Alternator1.jpg" class="image_2" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Gold Alternator
+                                </h3>
+                                <h5 slot="subtitle">
+                                    SKU: A1234-01
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" product_details-scope>
+                                <div class="row-layout group_13">
+                                    <IgbRating Value="@_value" Change="@(e => _value = e.Detail)" class="rating_1" product_details-scope></IgbRating>
+                                </div>
+                                <h6 class="content_4">
+                                    $59.90
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" product_details-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_1" product_details-scope>
+                                    <span class="material-icons icon_2">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard Outlined="false" class="card" product_details-scope>
+                            <IgbCardMedia class="media-content" product_details-scope>
+                                <img src="assets/Depositphotos_91150104_l-2015.jpg" class="image_2" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Tail Lamp Assembly
+                                </h3>
+                                <h5 slot="subtitle">
+                                    SKU: A1234-01
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" product_details-scope>
+                                <div class="row-layout group_13">
+                                    <IgbRating Value="@_value2" Change="@(e => _value2 = e.Detail)" class="rating_1" product_details-scope></IgbRating>
+                                </div>
+                                <h6 class="content_4">
+                                    $19.90
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" product_details-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_2" product_details-scope>
+                                    <span class="material-icons icon_2">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard Outlined="false" class="card" product_details-scope>
+                            <IgbCardMedia class="media-content" product_details-scope>
+                                <img src="assets/Depositphotos_39703145_l-2015.jpg" class="image_2" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Spark Plugs
+                                </h3>
+                                <h5 slot="subtitle">
+                                    SKU: A1234-01
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" product_details-scope>
+                                <div class="row-layout group_13">
+                                    <IgbRating Value="@_value3" Change="@(e => _value3 = e.Detail)" class="rating_1" product_details-scope></IgbRating>
+                                </div>
+                                <h6 class="content_4">
+                                    $11.00
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" product_details-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_3" product_details-scope>
+                                    <span class="material-icons icon_2">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard Outlined="false" class="card" product_details-scope>
+                            <IgbCardMedia class="media-content" product_details-scope>
+                                <img src="assets/Depositphotos_20993125_l-2015.jpg" class="image_2" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Oil Filters
+                                </h3>
+                                <h5 slot="subtitle">
+                                    SKU: A1234-01
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" product_details-scope>
+                                <div class="row-layout group_13">
+                                    <IgbRating Value="@_value4" Change="@(e => _value4 = e.Detail)" class="rating_1" product_details-scope></IgbRating>
+                                </div>
+                                <h6 class="content_4">
+                                    $24.50
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" product_details-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_4" product_details-scope>
+                                    <span class="material-icons icon_2">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard Outlined="false" class="card" product_details-scope>
+                            <IgbCardMedia class="media-content" product_details-scope>
+                                <img src="assets/Depositphotos_12011807_l-2015.jpg" class="image_2" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Headlight Assembly
+                                </h3>
+                                <h5 slot="subtitle">
+                                    SKU: A1234-01
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" product_details-scope>
+                                <div class="row-layout group_13">
+                                    <IgbRating Value="@_value3" Change="@(e => _value3 = e.Detail)" class="rating_1" product_details-scope></IgbRating>
+                                </div>
+                                <h6 class="content_4">
+                                    $49.50
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" product_details-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_5" product_details-scope>
+                                    <span class="material-icons icon_2">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard Outlined="false" class="card" product_details-scope>
+                            <IgbCardMedia class="media-content" product_details-scope>
+                                <img src="assets/Depositphotos_114068560_l-2015.jpg" class="image_2" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Winter Tires Set
+                                </h3>
+                                <h5 slot="subtitle">
+                                    SKU: A1234-01
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" product_details-scope>
+                                <div class="row-layout group_13">
+                                    <IgbRating Value="@_value" Change="@(e => _value = e.Detail)" class="rating_1" product_details-scope></IgbRating>
+                                </div>
+                                <h6 class="content_4">
+                                    $44.50
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" product_details-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_6" product_details-scope>
+                                    <span class="material-icons icon_2">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard Outlined="false" class="card" product_details-scope>
+                            <IgbCardMedia class="media-content" product_details-scope>
+                                <img src="assets/Depositphotos_51128759_l-2015.jpg" class="image_2" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Exhaust Pipe
+                                </h3>
+                                <h5 slot="subtitle">
+                                    SKU: A1234-01
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" product_details-scope>
+                                <div class="row-layout group_13">
+                                    <IgbRating Value="@_value4" Change="@(e => _value4 = e.Detail)" class="rating_1" product_details-scope></IgbRating>
+                                </div>
+                                <h6 class="h6">
+                                    $34.50
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" product_details-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_7" product_details-scope>
+                                    <span class="material-icons icon_2">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard Outlined="false" class="card" product_details-scope>
+                            <IgbCardMedia class="media-content" product_details-scope>
+                                <img src="assets/Depositphotos_63371615_l-2015.jpg" class="image_2" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Battery
+                                </h3>
+                                <h5 slot="subtitle">
+                                    SKU: A1234-01
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" product_details-scope>
+                                <div class="row-layout group_13">
+                                    <IgbRating Value="@_value2" Change="@(e => _value2 = e.Detail)" class="rating_1" product_details-scope></IgbRating>
+                                </div>
+                                <h6 class="h6">
+                                    $24.95
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" product_details-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_8" product_details-scope>
+                                    <span class="material-icons icon_2">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-layout sitemap">
+            <div class="column-layout group_6">
+                <p class="typography__subtitle-2 text_1">
+                    Dirección
+                </p>
+                <p class="typography__body-2 text_1">
+                    De los semaforos de la Vicky 1 cuadra al Sur,
+                </p>
+                <p class="typography__body-2 text_1">
+                    Dahani Colectivo. Managua, Nicaragua.
+                </p>
+                <p class="typography__subtitle-2 text_2">
+                    Numerico Telefonico
+                </p>
+                <p class="typography__body-2 text_1">
+                    +505 8360 5530
+                </p>
+            </div>
+            <div class="column-layout group_7">
+                <p class="typography__subtitle-2 text_1">
+                    Ayuda
+                </p>
+                <p class="typography__body-2 text_1">
+                    Preguntas y Respuestas
+                </p>
+                <p class="typography__body-2 text_1">
+                    Delivery
+                </p>
+            </div>
+            <div class="column-layout group_7">
+                <p class="typography__subtitle-2 text_1">
+                    Acerca
+                </p>
+                <p class="typography__body-2 text_1">
+                    Nosotros
+                </p>
+                <p class="typography__body-2 text_1">
+                    Reseñas
+                </p>
+            </div>
+            <div class="column-layout group_7">
+                <p class="typography__subtitle-2 text_1">
+                    Siguenos
+                </p>
+                <p class="typography__body-2 text_1">
+                    Facebook
+                </p>
+                <p class="typography__body-2 text_1">
+                    Instagram
+                </p>
+            </div>
+        </div>
+        <div class="row-layout footer">
+            <p class="typography__body-2 text_3">
+                Copyright ©2024 BlueMoon.com, Todos los derechos reservados.
+            </p>
+            <div class="row-layout group_8">
+                <p class="typography__body-2 text_4">
+                    Terminos y Condiciones
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private double _value = 4.5;
+    private string _value1 = "1";
+    private double _value2 = 4;
+    private double _value3 = 3.5;
+    private double _value4 = 5;
+}
+ *@
