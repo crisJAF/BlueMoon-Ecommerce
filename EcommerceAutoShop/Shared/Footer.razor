@@ -1,69 +1,62 @@
-﻿@* Footer.razor *@
-<style>
-    /* Estilos generales del footer */
-    .footer {
-        width: 100%;
-        background-color: #f8f9fa;
-        padding: 20px 0;
-        text-align: center;
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        flex-wrap: wrap;
-        margin-top: 20px; /* Esta propiedad ayudará a separarlo del contenido */
-        position: relative; /* Asegura que no esté fijo en la pantalla */
-    }
-
-    .footer-column {
-        flex: 1;
-        padding: 0 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-    }
-
-    .typography__subtitle-2 {
-        font-weight: bold;
-        margin-bottom: 10px;
-        font-size: 1rem;
-    }
-
-    .typography__body-2 {
-        margin-bottom: 5px;
-        font-size: 1rem;
-    }
-</style>
-
-<div class="footer">
-    <div class="footer-column">
-        <p class="typography__subtitle-2 text_1">Dirección</p>
-        <p class="typography__body-2 text_1">
-            <a href="https://maps.app.goo.gl/n5DMXZmdrhWFvNaS7" target="_blank" style="color: inherit; text-decoration: underline;">
-                <span>De los semáforos de la Vicky 1 cuadra al Sur,</span>
-                <span>Dahani Colectivo. Managua, Nicaragua.</span>
-            </a>
-        </p>
-        <p class="typography__subtitle-2 text_2">Número Telefónico</p>
-        <a href="https://wa.me/50583605530?text=Hola,%20quiero%20más%20información" target="_blank">+505 8360 5530</a>
-
-    </div>
-    <div class="footer-column">
-        <p class="typography__subtitle-2 text_1">Ayuda</p>
-        <p class="typography__body-2 text_1">Preguntas y Respuestas</p>
-        <p class="typography__body-2 text_1">Delivery</p>
-    </div>
-    <div class="footer-column">
-        <p class="typography__subtitle-2 text_1">Acerca</p>
-        <p class="typography__body-2 text_1">Nosotros</p>
-        <p class="typography__body-2 text_1">Reseñas</p>
-    </div>
-    <div class="footer-column">
-        <p class="typography__subtitle-2 text_1">Síguenos</p>
-        <p class="typography__body-2 text_1">
-            <a href="https://www.facebook.com/people/Perfumes-BlueMoon/61554733666570/" target="_blank" style="color: inherit; text-decoration: underline;">Facebook</a>
+﻿<div class="row-layout sitemap">
+    <div class="column-layout group_6">
+        <p class="typography__subtitle-2 text_1">
+            Dirección
         </p>
         <p class="typography__body-2 text_1">
-            <a href="https://www.instagram.com/perfumes_bluemoon?igsh=ZzdxbG55dTFmOGx2" target="_blank" style="color: inherit; text-decoration: underline;">Instagram</a>
+            De los semaforos de la Vicky 1 cuadra al Sur,
+        </p>
+        <p class="typography__body-2 text_1">
+            Dahani Colectivo. Managua, Nicaragua.
+        </p>
+        <p class="typography__subtitle-2 text_2">
+            Numerico Telefonico
+        </p>
+        <p class="typography__body-2 text_1">
+            +505 8360 5530
+        </p>
+    </div>
+    <div class="column-layout group_7">
+        <p class="typography__subtitle-2 text_1">
+            Ayuda
+        </p>
+        <p class="typography__body-2 text_1">
+            Preguntas y Respuestas
+        </p>
+        <p class="typography__body-2 text_1">
+            Delivery
+        </p>
+    </div>
+    <div class="column-layout group_7">
+        <p class="typography__subtitle-2 text_1">
+            Acerca
+        </p>
+        <p class="typography__body-2 text_1">
+            Nosotros
+        </p>
+        <p class="typography__body-2 text_1">
+            Reseñas
+        </p>
+    </div>
+    <div class="column-layout group_7">
+        <p class="typography__subtitle-2 text_1">
+            Siguenos
+        </p>
+        <p class="typography__body-2 text_1">
+            Facebook
+        </p>
+        <p class="typography__body-2 text_1">
+            Instagram
         </p>
     </div>
 </div>
+<footer class="row-layout footer">
+    <p class="typography__body-2 text_3">
+        Copyright ©2024 BlueMoon.com, Todos los derechos reservados.
+    </p>
+    <div class="row-layout group_8">
+        <p class="typography__body-2 text_4">
+            Terminos y Condiciones
+        </p>
+    </div>
+</footer>
