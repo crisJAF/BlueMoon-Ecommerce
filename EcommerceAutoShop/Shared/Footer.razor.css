@@ -65,3 +65,7 @@
     height: max-content;
     min-width: min-content;
 }
+
+.size_letra {
+    font-size: 1.1rem !important;
+}
