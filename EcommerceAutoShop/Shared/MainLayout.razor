@@ -2,7 +2,7 @@
 @inject NavigationManager NavigationManager
 
 <div class="column-layout master-view-container">
-    <div class="row-layout group">
+    @* <div class="row-layout group">
         <img src="assets/BlueMoon_logo-removebg-preview.png" @onclick="@(e => Navigate("/home"))" class="image" style="width: 100%; height: auto; object-fit: contain;" />
         <div class="row-layout group_1" style="margin-right: 5rem;">
             <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/home"))" class="button" master_view-scope>
@@ -34,7 +34,9 @@
                 <IgbRipple></IgbRipple>
             </IgbIconButton>
         </div>
-    </div>
+    </div> *@
+
+    <Header/>
 
     <div class="view-container">
         @Body
