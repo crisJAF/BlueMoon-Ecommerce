@@ -24,13 +24,22 @@
     font-size: 1rem;
     text-transform: uppercase;
     color: #242222;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .search-box {
+    background-color: transparent;
     border: none;
     border-bottom: 1px solid #000; /* Cambia el color según lo necesites */
     margin-left: 20px; /* Espacio entre los enlaces y el cuadro de búsqueda */
     padding: 5px;
     outline: none; /* Para quitar el contorno al hacer clic */
     width: 150px; /* Ajusta el ancho como desees */
+}
+
+.half-colored {
+    width: 100vw; /* Ancho del div */
+    height: 100vh; /* Alto del div */
+    background: linear-gradient(to right, white 50%, rgba(0, 0, 255, 0.25) 50%);
 }
