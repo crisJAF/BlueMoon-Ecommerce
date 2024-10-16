@@ -301,3 +301,8 @@
     color: #fff; /* Color del texto */
 }
 
+.half-colored {
+    width: 100vw; /*Ancho del div*/
+    height: 100vh; /*Alto del div*/
+    background: linear-gradient(to right, white 50%, rgba(0, 0, 53, 1) 50%);
+}

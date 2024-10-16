@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: flex-start;
     align-content: flex-start;
-    gap: 32px;
+    gap: 125px;
     overflow: hidden;
     position: relative;
     padding: 24px;
@@ -67,5 +67,5 @@
 }
 
 .size_letra {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
 }
