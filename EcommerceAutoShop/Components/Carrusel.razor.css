@@ -1,0 +1,15 @@
+﻿/*Carousel*/
+
+.image-carousel {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel__typography {
+    color: black;
+}
+
+.carousel-item {
+    background-color: black;
+    height: 100%;
+}
