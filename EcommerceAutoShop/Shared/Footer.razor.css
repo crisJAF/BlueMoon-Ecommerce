@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: flex-start;
     align-content: flex-start;
-    gap: 32px;
+    gap: 80px;
     overflow: hidden;
     position: relative;
     padding: 24px;
@@ -32,7 +32,7 @@
 }
 
 .footer {
-    background-color: hsla(var(--ig-gray-100));
+    background-color: rgba(26, 20, 230, 0.65);
     border-color: hsla(var(--ig-gray-200));
     border-width: 0px 0px 1px;
     border-style: solid;
@@ -67,5 +67,13 @@
 }
 
 .size_letra {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
+}
+
+.background_prefooter {
+    background-color: hsla(var(--ig-gray-100));
+}
+
+.textcolor_footer {
+    color: white;
 }
