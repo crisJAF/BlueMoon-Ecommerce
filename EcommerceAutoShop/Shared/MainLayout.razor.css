@@ -83,9 +83,9 @@
     }
 
 .view-container {
-    overflow: auto;
     position: relative;
     flex-grow: 1; /* Esto permite que el contenido ocupe el espacio restante */
+    padding-bottom: 10%;
 }
 
 footer {
