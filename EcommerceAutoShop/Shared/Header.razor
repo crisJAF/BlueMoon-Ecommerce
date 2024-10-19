@@ -6,10 +6,10 @@
         <img src="/assets/BlueMoon_logo-removebg-preview.png" class="image" />
     </div>
     <div class="header-items">
-        <a class="heder-items__typography">
+        <a class="heder-items__typography" @onclick="Home">
             Inicio
         </a>
-        <a class="heder-items__typography" onclick="mostrarPDF">
+        <a class="heder-items__typography">
             Marcas
         </a>
         <a class="heder-items__typography" @onclick="OpenPdfInNewTab">
@@ -18,7 +18,7 @@
         <a class="heder-items__typography">
             Promociones
         </a>
-        <a class="heder-items__typography">
+        <a class="heder-items__typography" @onclick="Contact">
             Contacto
         </a>
         <input type="text" placeholder="Buscar" class="search-box" />

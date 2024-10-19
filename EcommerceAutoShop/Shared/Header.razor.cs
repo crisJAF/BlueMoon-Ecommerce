@@ -12,5 +12,17 @@ namespace EcommerceAutoShop.Shared
             // Abrir la URL en una nueva pestaña
             NavigationManager.NavigateTo(pdfUrl, true);
         }
+        private void Home()
+        {
+            var pdfUrl = "/home";
+            // Abrir la URL en una nueva pestaña
+            NavigationManager.NavigateTo(pdfUrl, true);
+        }
+        private void Contact()
+        {
+            var pdfUrl = "/contacto";
+            // Abrir la URL en una nueva pestaña
+            NavigationManager.NavigateTo(pdfUrl, true);
+        }
     }
 }
