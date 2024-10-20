@@ -17,5 +17,5 @@
 .half-colored {
     width: 100vw; /*Ancho del div*/
     height: 100vh; /*Alto del div*/
-    background: linear-gradient(to right, white 50%, rgba(0, 0, 53, 0.7) 50%);
+    background: linear-gradient(to right, white 50%, rgba(173, 216, 230, 0.8) 50%);
 }

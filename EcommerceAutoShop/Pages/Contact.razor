@@ -1,0 +1,100 @@
+﻿@page "/contacto"
+
+<div class="contact-container">
+
+    <section class="contact-header">
+        <img src="assets/img_background_contact.jpg" alt="BlueMoon Fondo" class="header-image" />
+    </section>
+
+    <!-- Información de Contacto -->
+    <section class="contact-info">
+       <div class="container-main">
+            <div class="contact-info-box">
+                <h3 class="contact-header-title">Contacto</h3>
+                <p class="contact-header-subtitle">¿Tiene alguna consulta o comentario para nosotros?</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div class="contact-item-details">
+                            <h4>Nuestra Dirección</h4>
+                            <p>De los semáforos de la Vicky 1 cuadra al Sur, Dahani Colectivo. Managua</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div class="contact-item-details">
+                            <h4>Número Celular</h4>
+                            <p><a href="tel:+50586377357">+505 8637 7357</a></p>
+                            <p><a href="mailto:fraichenicaragua@hotmail.com">fraichenicaragua@hotmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-clock-fill"></i>
+                        </div>
+                        <div class="contact-item-details">
+                            <h4>Horario</h4>
+                            <p>Lunes - Viernes: 08:00 am - 05:00 pm</p>
+                            <p>Sábado: 08:00 am - 12:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mapa -->
+            <div class="contact-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.449939843694!2d-86.2697757!3d12.129223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f73ff257eaae7cf%3A0x61bcbd159b102662!2sPerfumes%20BlueMoon!5e0!3m2!1ses!2sni!4v1697628123456!5m2!1ses!2sni"
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+       </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section class="contact-form">
+        <div class="contact-form_container"
+            <h3 style="margin-bottom: 5%; padding-top: 3%;">Envíanos un correo</h3>
+            <EditForm Model="@formModel" OnValidSubmit="@HandleValidSubmit">
+                <div class="form-group_client">
+                    <InputText id="name" class="form-control" @bind-Value="formModel.Name" placeholder="Nombre" />
+                </div>
+                <div class="form-group_client">
+                    <InputText id="email" class="form-control" @bind-Value="formModel.Email" placeholder="Correo" />
+                </div>
+                <div class="form-group_client">
+                    <InputText id="phone" class="form-control" @bind-Value="formModel.PhoneNumber" placeholder="Telefono" />
+                </div>
+                <div class="form-message">
+                    <InputTextArea id="message" class="form-control" @bind-Value="formModel.Message" placeholder="Escribe un mensaje..." />
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </EditForm>
+        </div>
+    </section>
+</div>
+
+@code {
+    private ContactFormModel formModel = new ContactFormModel();
+
+    private void HandleValidSubmit()
+    {
+        // Manejar la lógica de envío aquí (puedes enviar el formulario por correo o usar un servicio)
+    }
+
+    public class ContactFormModel
+    {
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Message { get; set; }
+    }
+}

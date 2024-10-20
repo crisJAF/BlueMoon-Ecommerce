@@ -1,0 +1,184 @@
+﻿.contact-container {
+    margin: 0;
+}
+
+.contact-header {
+    padding: 0;
+    width: 100%; /* Asegura que el section ocupe todo el ancho */
+    margin: 0; /* Asegura que no haya márgenes en el section */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100vw;
+    height: 80vh;
+}
+
+.container-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    width: 80%;
+    padding: 0 0%;
+    margin-top: 50px;
+    height: 80%;
+}
+
+.contact-info-box {
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(173, 216, 230, 0.4);
+    font-family: "Playfair Display", serif;
+}
+
+/* Style for Contacto Title */
+.contact-header-title {
+    font-size: 2rem; /* Larger font size for prominence */
+    font-weight: 700; /* Bold for emphasis */
+    color: #000090; /* Match with primary color scheme */
+    margin: 0;
+    padding-bottom: 10px; /* Space between title and subtitle */
+    text-align: center; /* Center alignment for visual balance */
+    letter-spacing: 1px; /* Slight spacing for elegance */
+}
+
+/* Style for Subtitle */
+.contact-header-subtitle {
+    font-size: 1.2rem; /* Slightly smaller but still noticeable */
+    font-weight: 300; /* Lighter weight for contrast */
+    color: #757575; /* Slightly muted color for softer tone */
+    text-align: center; /* Center alignment for balance */
+    margin-top: 0;
+    margin-bottom: 30px; /* Space between subtitle and contact details */
+}
+
+
+.header-image {
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+    object-position: center 67%;
+}
+
+.contact-map {
+    width: 100%;
+    align-content: center;
+}
+
+.contact-details {
+    margin-top: 20px;
+    text-align: left; /* Centra todo el contenido de texto */
+}
+
+.contact-details h4 {
+    margin: 20px 0 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    margin-bottom: 6%;
+    margin-left: 7%;
+}
+
+.contact-icon {
+    background-color: #000090;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.contact-icon i {
+    color: white;
+    font-size: 20px; /* Tamaño del ícono */
+}
+
+.contact-item-details h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-item-details p {
+    margin: 0;
+    font-size: 14px;
+    color: #757575;
+}
+
+.contact-map iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    padding-left: 10%;
+}
+
+.contact-form {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.contact-form_container {
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+    background: rgba(173, 216, 230, 0.4);
+}
+.contact-form h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700; /* Bold for emphasis */
+    color: #000090; /* Match with primary color scheme */
+    letter-spacing: 1px; /* Slight spacing for elegance */
+}
+
+.form-group_client {
+    margin-bottom: 20px;
+    padding: 0 10%;
+    width: 60%;
+}
+.form-message {
+    margin-bottom: 20px;
+    padding: 0 10%;
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #000090;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 800px){
+    .container-main {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+        border: 2px solid blue;
+        width: 80%;
+        padding: 0 10%;
+        margin-top: 50px;
+        height: 90%;
+    }
+}
