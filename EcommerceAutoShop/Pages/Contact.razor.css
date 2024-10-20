@@ -1,0 +1,158 @@
+﻿.contact-container {
+    max-width: 1200px;
+    margin: 0;
+}
+
+.contact-header {
+    padding: 0;
+    width: 100vw; /* Asegura que el section ocupe todo el ancho */
+    margin: 0; /* Asegura que no haya márgenes en el section */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100vw;
+    height: 80vh;
+}
+
+.container-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    border: 2px solid red;
+    width: 80%;
+    padding: 0 10%;
+    margin-top: 50px;
+    height: 90%;
+}
+
+.contact-info-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(173, 216, 230, 0.4);
+}
+
+.left-aligned-text_h3 {
+    align-self: flex-start;
+    margin-left: 5%;
+}
+
+.left-aligned-text_p {
+    align-self: flex-start;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+
+.contact-info-box p {
+    word-break: break-all;
+    width: 60%;
+}
+
+.header-image {
+    width: 100vw;
+    height: 55vh;
+    object-fit: cover;
+    object-position: center 67%;
+}
+
+
+.contact-map {
+    width: 100%;
+    align-content: center;
+}
+
+.contact-details {
+    margin-top: 30px;
+}
+
+    .contact-details h4 {
+        margin: 20px 0 10px;
+    }
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact-icon {
+    background-color: #e91e63;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+    .contact-icon i {
+        color: white;
+        font-size: 20px; /* Tamaño del ícono */
+    }
+
+.contact-item-details h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-item-details p {
+    margin: 0;
+    font-size: 14px;
+    color: #757575;
+}
+
+.contact-map iframe {
+    width: 600px;
+    height: 450px;
+    border: 0;
+    padding-left: 200px;
+    border: 2px solid blue;
+}
+
+.contact-form {
+    text-align: center;
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #f400a1;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}

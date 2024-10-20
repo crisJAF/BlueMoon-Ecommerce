@@ -1,369 +1,91 @@
 @page "/all_products"
 @inject NavigationManager NavigationManager
 
-<div class="column-layout all-products-container">
-    <div class="column-layout page-content">
-        <div class="column-layout inner-pages-header">
-            @* <img src="assets/AutoDeals_Logo.svg" class="image" /> *@
-            <p class="typography__body-1 text">
-                Disfruta del descuento del 6% en las compras mayores de 3 productos
-            </p>
+@using System.Collections.Generic
+
+<h3 style="margin: 3rem;">AHINASH Productos</h3>
+
+<!-- #region Filtros -->
+<div style="margin: 3rem;">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand">Filtro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Precio
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-white">
+                            <li><a class="dropdown-item">0$ - 20$</a></li>
+                            <li><a class="dropdown-item">20$ - 50$</a></li>
+                            <li><a class="dropdown-item">50$ - 80$</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="row-layout content">
-            <div class="row-layout group">
-                <div class="column-layout filters">
-                    <div class="column-layout group_1">
-                        <p class="typography__subtitle-2 text_1">
-                            CATEGORIAS
+    </nav>
+</div>
+<!-- #endregion -->
+
+<!-- #region All Products -->
+
+<div class="container">
+    <div class="row">
+        @foreach (var product in Products)
+        {
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm h-100">
+                    <img src="@product.ImageUrl" class="card-img-top" alt="@product.Name" />
+                    <div class="card-body">
+                        <h6 class="card-title">@product.Name</h6>
+                        <p class="card-text">
+                            <span class="text-muted"><s>$@product.OldPrice USD</s></span>
+                            <br />
+                            <strong>$@product.Price USD</strong>
                         </p>
-                        <IgbList class="list" all_products-scope>
-                            <IgbListItem>
-                                <div slot="title">Hombres</div>
-                            </IgbListItem>
-                            <IgbListItem>
-                                <div slot="title">Mujeres</div>
-                            </IgbListItem>
-                        </IgbList>
-                        <a class="typography__body-2 hyperlink">
-                            Show All
-                        </a>
-                    </div>
-                    <div class="column-layout group_1">
-                        <p class="typography__subtitle-2 text_1">
-                            PRICE
-                        </p>
-                        <IgbList class="list" all_products-scope>
-                            <IgbListItem>
-                                <div slot="title">$1 - $10</div>
-                            </IgbListItem>
-                            <IgbListItem>
-                                <div slot="title">$10 - $20</div>
-                            </IgbListItem>
-                            <IgbListItem>
-                                <div slot="title">$20 - $50</div>
-                            </IgbListItem>
-                            <IgbListItem>
-                                <div slot="title">$50 - $100</div>
-                            </IgbListItem>
-                            <IgbListItem>
-                                <div slot="title">$100 and Up</div>
-                            </IgbListItem>
-                        </IgbList>
-                        <a class="typography__body-2 hyperlink">
-                            Show All
-                        </a>
-                    </div>
-                    @* <div class="column-layout group_1">
-                        <p class="typography__subtitle-2 text_1">
-                            BRAND
-                        </p>
-                        <IgbList class="list" all_products-scope>
-                            <IgbListItem>
-                                <div slot="title">Anzo</div>
-                            </IgbListItem>
-                            <IgbListItem>
-                                <div slot="title">Dorman</div>
-                            </IgbListItem>
-                            <IgbListItem>
-                                <div slot="title">Hella</div>
-                            </IgbListItem>
-                            <IgbListItem>
-                                <div slot="title">Keystone Collision</div>
-                            </IgbListItem>
-                            <IgbListItem>
-                                <div slot="title">Pilot Certified</div>
-                            </IgbListItem>
-                        </IgbList>
-                        <a class="typography__body-2 hyperlink">
-                            Show All
-                        </a>
-                    </div> *@
-                </div>
-                <div class="column-layout products">
-                    <div class="row-layout group_2">
-                        <h5 class="content_1">
-                            Newest Arrivals
-                        </h5>
-                        <div class="row-layout group_3">
-                            <p class="typography__body-1 content_1">
-                                1-6 OF 202 RESULTS
-                            </p>
-                            <IgbButton Variant="ButtonVariant.Flat" @ref="_button" @onclick="@(e => _dropdown!.ToggleAsync(_button))" class="button" all_products-scope>
-                                <span>SORT BY</span>
-                                <span class="material-icons">
-                                    keyboard_arrow_down
-                                </span>
-                                <IgbRipple></IgbRipple>
-                            </IgbButton>
-                            <IgbDropdown @ref="_dropdown" class="dropdown" all_products-scope>
-                                <IgbDropdownItem>
-                                    Newest Arrivals
-                                </IgbDropdownItem>
-                                <IgbDropdownItem>
-                                    Featured
-                                </IgbDropdownItem>
-                                <IgbDropdownItem>
-                                    Price: Low to High
-                                </IgbDropdownItem>
-                                <IgbDropdownItem>
-                                    Price: High to Low
-                                </IgbDropdownItem>
-                                <IgbDropdownItem>
-                                    Avg. Customer Review
-                                </IgbDropdownItem>
-                            </IgbDropdown>
-                        </div>
-                    </div>
-                    <div class="row-layout group_4">
-                        <IgbCard @onclick="@(e => Navigate("/product_details"))" class="card" all_products-scope>
-                            <IgbCardMedia class="media-content" all_products-scope>
-                                <img src="assets/F1.webp" class="image_1" />
-                            </IgbCardMedia>
-                            <IgbCardHeader>
-                                <h3 slot="title">
-                                    Ainash Washington Ave
-                                </h3>
-                                <h5 slot="subtitle">
-                                    Inspirado en Greenwich Village
-                                    De Bond N°9
-                                </h5>
-                            </IgbCardHeader>
-                            <IgbCardContent class="body-content" all_products-scope>
-                                <h6 class="h6">
-                                    $59.90
-                                </h6>
-                            </IgbCardContent>
-                            <IgbCardActions class="actions-content" all_products-scope>
-                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_1" all_products-scope>
-                                    <span class="material-icons icon">
-                                        add_shopping_cart
-                                    </span>
-                                    <span>ADD TO CART</span>
-                                    <IgbRipple></IgbRipple>
-                                </IgbButton>
-                            </IgbCardActions>
-                        </IgbCard>
-                        <IgbCard class="card" all_products-scope>
-                            <IgbCardMedia class="media-content" all_products-scope>
-                                <img src="assets/F2.webp" class="image_1" />
-                            </IgbCardMedia>
-                            <IgbCardHeader>
-                                <h3 slot="title">
-                                    Ainash Rose Molecule for Women
-                                </h3>
-                                <h5 slot="subtitle">
-                                    Inspirado en Atomic Rose
-                                    De Initio
-                                </h5>
-                            </IgbCardHeader>
-                            <IgbCardContent class="body-content" all_products-scope>
-                                <h6 class="h6">
-                                    $19.90
-                                </h6>
-                            </IgbCardContent>
-                            <IgbCardActions class="actions-content" all_products-scope>
-                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_2" all_products-scope>
-                                    <span class="material-icons icon">
-                                        add_shopping_cart
-                                    </span>
-                                    <span>ADD TO CART</span>
-                                    <IgbRipple></IgbRipple>
-                                </IgbButton>
-                            </IgbCardActions>
-                        </IgbCard>
-                        <IgbCard class="card" all_products-scope>
-                            <IgbCardMedia class="media-content" all_products-scope>
-                                <img src="assets/F3.webp" class="image_1" />
-                            </IgbCardMedia>
-                            <IgbCardHeader>
-                                <h3 slot="title">
-                                    Ainash To Be Different
-                                </h3>
-                                <h5 slot="subtitle">
-                                    Inspirado en Santal 33
-                                    De Labo
-                                </h5>
-                            </IgbCardHeader>
-                            <IgbCardContent class="body-content" all_products-scope>
-                                <h6 class="h6">
-                                    $11.00
-                                </h6>
-                            </IgbCardContent>
-                            <IgbCardActions class="actions-content" all_products-scope>
-                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_3" all_products-scope>
-                                    <span class="material-icons icon">
-                                        add_shopping_cart
-                                    </span>
-                                    <span>ADD TO CART</span>
-                                    <IgbRipple></IgbRipple>
-                                </IgbButton>
-                            </IgbCardActions>
-                        </IgbCard>
-                        <IgbCard class="card" all_products-scope>
-                            <IgbCardMedia class="media-content" all_products-scope>
-                                <img src="assets/F7-2.webp" class="image_1" />
-                            </IgbCardMedia>
-                            <IgbCardHeader>
-                                <h3 slot="title">
-                                    Ainash Believe in Yourself
-                                </h3>
-                                <h5 slot="subtitle">
-                                    Inspirado en Bond N°9
-                                    De Bond N°9
-                                </h5>
-                            </IgbCardHeader>
-                            <IgbCardContent class="body-content" all_products-scope>
-                                <h6 class="h6">
-                                    $24.50
-                                </h6>
-                            </IgbCardContent>
-                            <IgbCardActions class="actions-content" all_products-scope>
-                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_4" all_products-scope>
-                                    <span class="material-icons icon">
-                                        add_shopping_cart
-                                    </span>
-                                    <span>ADD TO CART</span>
-                                    <IgbRipple></IgbRipple>
-                                </IgbButton>
-                            </IgbCardActions>
-                        </IgbCard>
-                        <IgbCard class="card" all_products-scope>
-                            <IgbCardMedia class="media-content" all_products-scope>
-                                <img src="assets/F71.webp" class="image_1" />
-                            </IgbCardMedia>
-                            <IgbCardHeader>
-                                <h3 slot="title">
-                                    Ainash She is Love
-                                </h3>
-                                <h5 slot="subtitle">
-                                    Inspirado en Accento overdose
-                                    De Xerjoff
-                                </h5>
-                            </IgbCardHeader>
-                            <IgbCardContent class="body-content" all_products-scope>
-                                <h6 class="h6">
-                                    $32.90
-                                </h6>
-                            </IgbCardContent>
-                            <IgbCardActions class="actions-content" all_products-scope>
-                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_5" all_products-scope>
-                                    <span class="material-icons icon">
-                                        add_shopping_cart
-                                    </span>
-                                    <span>ADD TO CART</span>
-                                    <IgbRipple></IgbRipple>
-                                </IgbButton>
-                            </IgbCardActions>
-                        </IgbCard>
-                        <IgbCard class="card" all_products-scope>
-                            <IgbCardMedia class="media-content" all_products-scope>
-                                <img src="assets/F9.webp" class="image_1" />
-                            </IgbCardMedia>
-                            <IgbCardHeader>
-                                <h3 slot="title">
-                                    Ainash Perfect Man
-                                </h3>
-                                <h5 slot="subtitle">
-                                    Inspirado en Original Santal
-                                    De Creed
-                                </h5>
-                            </IgbCardHeader>
-                            <IgbCardContent class="body-content" all_products-scope>
-                                <h6 class="h6">
-                                    $44.50
-                                </h6>
-                            </IgbCardContent>
-                            <IgbCardActions class="actions-content" all_products-scope>
-                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_6" all_products-scope>
-                                    <span class="material-icons icon">
-                                        add_shopping_cart
-                                    </span>
-                                    <span>ADD TO CART</span>
-                                    <IgbRipple></IgbRipple>
-                                </IgbButton>
-                            </IgbCardActions>
-                        </IgbCard>
-                        <IgbCard class="card" all_products-scope>
-                            <IgbCardMedia class="media-content" all_products-scope>
-                                <img src="assets/F10.webp" class="image_1" />
-                            </IgbCardMedia>
-                            <IgbCardHeader>
-                                <h3 slot="title">
-                                    Ainash One to Remember
-                                </h3>
-                                <h5 slot="subtitle">
-                                    Inspirado en Alexandria II
-                                    De Xerjoff
-                                </h5>
-                            </IgbCardHeader>
-                            <IgbCardContent class="body-content" all_products-scope>
-                                <h6 class="h6">
-                                    $49.90
-                                </h6>
-                            </IgbCardContent>
-                            <IgbCardActions class="actions-content" all_products-scope>
-                                <IgbButton Variant="ButtonVariant.Flat" slot="start" class="button_1 button_1_7" all_products-scope>
-                                    <span class="material-icons icon">
-                                        add_shopping_cart
-                                    </span>
-                                    <span>ADD TO CART</span>
-                                    <IgbRipple></IgbRipple>
-                                </IgbButton>
-                            </IgbCardActions>
-                        </IgbCard>
-                    </div>
-                    <div class="row-layout group_5">
-                        <div class="row-layout group_6">
-                            <IgbButton Variant="ButtonVariant.Flat" class="button" all_products-scope>
-                                <span class="material-icons">
-                                    arrow_back
-                                </span>
-                                <span>PREVIOUS</span>
-                                <IgbRipple></IgbRipple>
-                            </IgbButton>
-                            <IgbButtonGroup class="button-group" all_products-scope>
-                                <IgbToggleButton>
-                                    1
-                                    <IgbRipple></IgbRipple>
-                                </IgbToggleButton>
-                                <IgbToggleButton>
-                                    2
-                                    <IgbRipple></IgbRipple>
-                                </IgbToggleButton>
-                                <IgbToggleButton>
-                                    3
-                                    <IgbRipple></IgbRipple>
-                                </IgbToggleButton>
-                                <IgbToggleButton>
-                                    4
-                                    <IgbRipple></IgbRipple>
-                                </IgbToggleButton>
-                                <IgbToggleButton>
-                                    5
-                                    <IgbRipple></IgbRipple>
-                                </IgbToggleButton>
-                            </IgbButtonGroup>
-                            <IgbButton Variant="ButtonVariant.Flat" class="button" all_products-scope>
-                                <span>NEXT</span>
-                                <span class="material-icons">
-                                    arrow_forward
-                                </span>
-                                <IgbRipple></IgbRipple>
-                            </IgbButton>
+                        <div class="card-button">
+                            @if (product.IsSoldOut)
+                            {
+                                <button class="btn btn-outline-secondary" disabled>Sold out</button>
+                            }
+                            else
+                            {
+                                <button class="btn btn-outline-primary">Add to cart</button>
+                            }
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        }
     </div>
 </div>
 
-@code {
-    private IgbButton _button;
-    private IgbDropdown _dropdown;
 
-    public void Navigate(string path)
+<!-- #endregion -->
+
+
+@code {
+    // List of products
+    private List<Product> Products = new List<Product>
     {
-        NavigationManager.NavigateTo(path);
+        new Product { Name = "Athan by Ainash Parfums", Price = 58.50m, OldPrice = 90.00m, ImageUrl = "assets/F2.webp", IsSoldOut = true },
+        new Product { Name = "Fleur De Paris by Ainash", Price = 58.50m, OldPrice = 90.00m, ImageUrl = "assets/F3.webp", IsSoldOut = false },
+        new Product { Name = "Aria by Ainash Parfums", Price = 58.50m, OldPrice = 90.00m, ImageUrl = "assets/F4.webp", IsSoldOut = true },
+        new Product { Name = "Royal Noir Absolu by Ainash", Price = 58.50m, OldPrice = 90.00m, ImageUrl = "assets/F5.webp", IsSoldOut = false }
+    };
+
+    // Product model
+    public class Product
+    {
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public decimal OldPrice { get; set; }
+        public string ImageUrl { get; set; }
+        public bool IsSoldOut { get; set; }
     }
 }
