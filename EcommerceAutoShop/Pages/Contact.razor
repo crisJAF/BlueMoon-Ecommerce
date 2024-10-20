@@ -3,15 +3,15 @@
 <div class="contact-container">
 
     <section class="contact-header">
-        <img src="assets/bluemoon_background_contactozzzyyy.png" alt="BlueMoon Fondo" class="header-image" />
+        <img src="assets/img_background_contact.jpg" alt="BlueMoon Fondo" class="header-image" />
     </section>
 
     <!-- Información de Contacto -->
     <section class="contact-info">
        <div class="container-main">
             <div class="contact-info-box">
-                <h3 class="left-aligned-text_h3">Contacto</h3>
-                <p class="left-aligned-text_p">¿Tiene alguna consulta o comentario para nosotros?</p>
+                <h3 class="contact-header-title">Contacto</h3>
+                <p class="contact-header-subtitle">¿Tiene alguna consulta o comentario para nosotros?</p>
                 <div class="contact-details">
                     <div class="contact-item">
                         <div class="contact-icon">
@@ -19,7 +19,7 @@
                         </div>
                         <div class="contact-item-details">
                             <h4>Nuestra Dirección</h4>
-                            <p>123 Perfumería BlueMoon, Avenida XYZ, Ciudad ABC</p>
+                            <p>De los semáforos de la Vicky 1 cuadra al Sur, Dahani Colectivo. Managua</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -47,12 +47,13 @@
 
             <!-- Mapa -->
             <div class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=..."
-                        width="600"
-                        height="450"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.449939843694!2d-86.2697757!3d12.129223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f73ff257eaae7cf%3A0x61bcbd159b102662!2sPerfumes%20BlueMoon!5e0!3m2!1ses!2sni!4v1697628123456!5m2!1ses!2sni"
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
                 </iframe>
             </div>
        </div>
@@ -60,31 +61,25 @@
 
     <!-- Formulario de Contacto -->
     <section class="contact-form">
-        <h3>Envíanos un correo</h3>
-        <EditForm Model="@formModel" OnValidSubmit="@HandleValidSubmit">
-            <div class="form-group">
-                <InputText id="name" class="form-control" @bind-Value="formModel.Name" placeholder="Your Name" />
-            </div>
-            <div class="form-group">
-                <InputText id="email" class="form-control" @bind-Value="formModel.Email" placeholder="Email Address" />
-            </div>
-            <div class="form-group">
-                <InputText id="phone" class="form-control" @bind-Value="formModel.PhoneNumber" placeholder="Phone Number" />
-            </div>
-            <div class="form-group">
-                <InputTextArea id="message" class="form-control" @bind-Value="formModel.Message" placeholder="Write message..." />
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </EditForm>
+        <div class="contact-form_container"
+            <h3 style="margin-bottom: 5%; padding-top: 3%;">Envíanos un correo</h3>
+            <EditForm Model="@formModel" OnValidSubmit="@HandleValidSubmit">
+                <div class="form-group_client">
+                    <InputText id="name" class="form-control" @bind-Value="formModel.Name" placeholder="Nombre" />
+                </div>
+                <div class="form-group_client">
+                    <InputText id="email" class="form-control" @bind-Value="formModel.Email" placeholder="Correo" />
+                </div>
+                <div class="form-group_client">
+                    <InputText id="phone" class="form-control" @bind-Value="formModel.PhoneNumber" placeholder="Telefono" />
+                </div>
+                <div class="form-message">
+                    <InputTextArea id="message" class="form-control" @bind-Value="formModel.Message" placeholder="Escribe un mensaje..." />
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </EditForm>
+        </div>
     </section>
-
-    <!-- Botón de WhatsApp flotante -->
-    <div class="whatsapp-button">
-        <a href="https://wa.me/50586377357" target="_blank">
-            <img src="path/to/whatsapp-icon.png" alt="WhatsApp" />
-            Necesitas ayuda? Chat con nosotros
-        </a>
-    </div>
 </div>
 
 @code {
